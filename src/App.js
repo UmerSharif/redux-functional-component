@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import Counter from "./Counter";
-
+import store from "./store/store";
 function App() {
-  return <div className="App">Hello</div>;
+  return (
+    <div className="App">
+      <Counter store={store} />
+    </div>
+  );
 }
 
 export default App;
