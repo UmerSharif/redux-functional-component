@@ -1,7 +1,8 @@
 import { createStore } from "redux";
 
 const initialState = {
-  count: 3
+  count: 3,
+  formData: "Hello Redux"
 };
 
 const reducer = (state = initialState, action) => {
@@ -12,6 +13,12 @@ const reducer = (state = initialState, action) => {
         ...state,
         count: state.count + 1
       };
+    case "ADD":
+      return {
+        ...state,
+        formData: action.payload
+      };
+
     default:
       return state;
   }
